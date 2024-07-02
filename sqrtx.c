@@ -1,17 +1,34 @@
 #include <stdio.h>
 #include <math.h>
+#include <locale.h>
 
-int sqrtx( int a, int b, int c )
-    {
-        float x1=(-b + sqrt(b*b-4*a*c))/2*a;
-        float x2=(-b - sqrt(b*b-4*a*c))/2*a;
-    
-    }
 
 int main(void)
-{ int a, b, c, x1, x2;
-    scanf("%d%d%d", &a, &b, &c);
-    sqrtx(a, b, c);
-    printf("x1, x2 = %d\n %d\n", x1, x2 );
+{ int a, b, c;
+  double x1; 
+  double x2;
+  char *locale = setlocale(LC_ALL, "");
+    
+int sqrtx( int a, int b, int c )
+    {
+        double d = b*b-4*a*c;
+        if (d > 0) 
+            { 
+            double sd = sqrt (d);               
+            double x1=(-1*b + sd)/(2*a);
+            double x2=(-1*b - sd)/(2*a);          
+            printf("2 корня\na=%d\nb=%d\nc=%d\nsqr=%f\nx1=%f\nx2=%f\n", a, b, c, sd, x1, x2);
+            }
+                                  
+        else if ( d = 0)
+            { double x1 =-1*b /(2*a);
+                printf("1 корень \na=%d\nb=%d\nc=%d\nx1=%f", a, b, c, x1);}
+        else
+            {printf("0 корней");}    
+    }
+printf("Введите значение a, b, c со знаком\n");
+scanf("%d%d%d", &a, &b, &c);
+sqrtx(a, b, c);
+    
 return 0;
 }
