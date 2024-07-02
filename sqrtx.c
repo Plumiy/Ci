@@ -17,18 +17,18 @@ int sqrtx( int a, int b, int c )
             double sd = sqrt (d);               
             double x1=(-1*b + sd)/(2*a);
             double x2=(-1*b - sd)/(2*a);          
-            printf("2 корня\na=%d\nb=%d\nc=%d\nsqr=%f\nx1=%f\nx2=%f\n", a, b, c, sd, x1, x2);
+            printf("2 korny\na=%d\nb=%d\nc=%d\nsqr=%f\nx1=%f\nx2=%f\n", a, b, c, sd, x1, x2);
             }
                                   
         else if ( d = 0)
             { double x1 =-1*b /(2*a);
-                printf("1 корень \na=%d\nb=%d\nc=%d\nx1=%f", a, b, c, x1);}
+                printf("1 koern\na=%d\nb=%d\nc=%d\nx1=%f", a, b, c, x1);}
         else
-            {printf("0 корней");}    
+            {printf("0 korney");}    
     }
-printf("Введите значение a, b, c со знаком\n");
-scanf("%d%d%d", &a, &b, &c);
-sqrtx(a, b, c);
+    printf("Vvedite a, b, c co znakon\n");
+    scanf("%d%d%d", &a, &b, &c);
+    sqrtx(a, b, c);
     
 return 0;
 }
