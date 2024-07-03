@@ -10,8 +10,7 @@ int main(void)
   char *locale = setlocale(LC_ALL, "");
     
 int sqrtx( int a, int b, int c )
-    {
-        double d = b*b-4*a*c;
+    {   double d = b*b-4*a*c;
         if (d > 0) 
             { 
             double sd = sqrt (d);               
